@@ -1,0 +1,22 @@
+@import '../../../theme/variabels.scss';
+
+
+.accordion-button {
+align-items: stretch !important;
+white-space: nowrap;
+border: 1px solid $light-primmary-color;
+background: $light-primmary-color;
+color: $light-white-color;
+border-radius: 0 !important;
+font-size: 14px;
+}
+
+.accordion-button:focus {
+    border-color: $light-primmary-color;
+    box-shadow: none !important;
+}
+
+.accordion-body {
+    padding: 1rem;
+    border: 1px solid $light-border-color;
+}

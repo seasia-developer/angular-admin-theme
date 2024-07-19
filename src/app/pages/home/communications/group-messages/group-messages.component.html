@@ -1,0 +1,37 @@
+<div class="card tab-page my-4">
+    <div class="card-header py-4 d-flex flex-wrap align-items-center justify-content-between">
+        <span>List of sent messages</span>
+        <div class="btn-container"> 
+            <button type="button" class="btn btn-outline-primary" routerLink="/announcements/addnew-annoucements">Sent Group Emails</button>
+            <button type="button" class="btn btn-outline-primary ms-2" routerLink="/announcements/addnew-annoucements">Sent Group Text Messages</button>
+        </div>
+
+    </div>
+    <div class="card-body">
+        <div class="table-responsive w-100">
+            <div>
+              <!-- <mat-form-field>
+                <input matInput placeholder="Search" [(ngModel)]="searchTerm" (ngModelChange)="applyFilter()">
+              </mat-form-field> -->
+              <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+                <!-- Define the table columns -->
+                <ng-container *ngFor="let column of displayedColumns" [matColumnDef]="column" class="mt-2">
+                  <th mat-header-cell *matHeaderCellDef> {{ column }} </th>
+                  <!-- <td mat-cell *matCellDef="let element"> {{ column }} </td> -->
+                <td mat-cell *matCellDef="let element">    {{ element[column]}}  </td>
+                </ng-container>
+                <!-- Define the table header row -->
+                <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                <!-- Define the table rows -->
+                <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+              </table>
+              <!-- Paginator -->
+              <div class="mat-paginator">
+
+                <mat-paginator [pageSize]="pageSize" [pageIndex]="pageIndex" [pageSizeOptions]="[5, 10, 25, 100]"
+                [length]="totalItems" (page)="onPageChange($event)"></mat-paginator>
+              </div>
+            </div>
+          </div>
+    </div>
+</div>

@@ -1,0 +1,37 @@
+<section class="communication-wrapper">
+    <div class="row">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-body">
+                    <ul class="nav nav-tabs d-flex flex-wrap" id="nav-tab" role="tablist">
+                        <li class="">
+                            <a class="w-100 nav-item nav-link" routerLink="emails" routerLinkActive="active"
+                                style="flex: 1">
+                                Email
+                            </a>
+                        </li>
+                        <!-- TAB1 -->
+
+                        <!-- TAB2 -->
+                        <li>
+                            <a class="w-100 nav-item nav-link" routerLink="text-Messages" routerLinkActive="active"
+                                style="flex: 1">
+                                Text Messages
+                            </a>
+                        </li>
+
+                        
+                        <!-- TAB3 -->
+                        <li>
+                            <a class="w-100 nav-item nav-link" routerLink="groupMessages" routerLinkActive="active"
+                                style="flex: 1">
+                                Group Messages / Email
+                            </a>
+                        </li>
+                    </ul>
+                    <router-outlet></router-outlet>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

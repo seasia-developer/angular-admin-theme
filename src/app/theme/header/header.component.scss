@@ -1,0 +1,61 @@
+
+//color stylesheet imported
+
+@import '../variabels.scss';
+
+
+.top-header .navbar {
+    position: fixed;
+    top: 0;
+    left: 260px;
+    right: 0;
+    height: 80px;
+    padding: 0 1rem;
+    background-color: #ffffff;
+    border-bottom: 1px solid $light-border-color;
+    z-index: 2;
+    transition: ease-out .3s;
+
+    .btn-toggle-menu {
+        font-size: 22px;
+        cursor: pointer;
+        width: 35px;
+        height: 35px;
+        background-color: #ffffff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: $light-icon-color;
+        border-radius: 50%;
+        border: 1px solid $light-primmary-color;
+        color: $light-primmary-color;
+    }
+
+    .search-bar {
+        width: 30%;
+        cursor: pointer;
+
+        .rounded-5 {
+            border-radius: 2rem;
+        }
+    }
+
+
+    .navbar-nav {
+        flex-direction: row !important;
+
+        .nav-item .nav-link {
+            font-size: 22px;
+            cursor: pointer;
+            width: 40px;
+            height: 40px;
+            background-color: #ffffff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: $light-primmary-color;
+            border-radius: 50%;
+            border: 1px solid $light-primmary-color;
+        }
+    }
+}

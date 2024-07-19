@@ -1,0 +1,83 @@
+<section class="login-container mx-3 mx-lg-0">
+    <div class="card mx-auto my-4 col-xl-9 p-3 border-3 overflow-hidden rounded-4">
+        <div class="row g-3">
+            <div class="col-lg-6 d-flex flex-wrap">
+                <div class="card-body p-5 ">
+                    <div class="logo-image mb-4 d-flex flex-wrap align-items-center">
+                        <img src="../../../../assets/Images/favicon-new.svg" width="50px" alt="seasialogo">
+                        <h3 class="mb-0 ms-2 fw-bold">SEASIA</h3>
+                    </div>
+                    <div class="login-text">
+                        <h4 class="fw-bold">Get Started Now</h4>
+                        <p>Enter Your Credentials to login to your account</p>
+                    </div>
+
+                    <div class="form-body">
+                        <form [formGroup]="loginForm" (ngSubmit)="loginFormSubmit()">
+                            <div class="row g-3">
+                                <div class="col-12">
+                                    <div class="form-group-container">
+                                        <div class="form-group p-0">
+                                            <label for="inputEmailAddress" class="form-label">Email</label>
+                                            <input type="email" name="email" id="email" placeholder="Enter Your Email" 
+                                                class="form-control" formControlName="userEmail">
+                                        </div>
+                                        <div class="form-error text-danger"
+                                            *ngIf="formControls['userEmail'].errors && (formControls['userEmail'].dirty || formControls['userEmail'].touched)">
+                                            <span *ngIf="formControls['userEmail'].errors['required']">Email is
+                                                required</span>
+                                            <span *ngIf="formControls['userEmail'].errors['email']">Invalid Email
+                                                Format</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-group-container">
+                                        <div class="form-group p-0">
+                                            <label for="inputPassword" class="form-label">Password</label>
+                                            <input type="password" name="password" id="password"
+                                                placeholder="Enter Your password" class="form-control"
+                                                formControlName="userPassword" >
+                                        </div>
+                                        <div class="form-error text-danger" *ngIf="formControls['userPassword'].errors && (formControls['userPassword'].dirty || formControls['userPassword'].touched)">
+                                            <span *ngIf="formControls['userPassword'].errors['required']">
+                                                Password is required
+                                            </span>
+
+                                            <span *ngIf="formControls['userPassword'].errors['minlength']">
+                                                Password should be at least 8 characters long.
+                                            </span>
+
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <div class="col-12">
+                                    <label for="forgotpassword" class="form-label cursor-pointer">
+                                      <a routerLink="/auth/forgotPassowrd">Forgot Password ?</a>
+                                    </label>
+                                </div>
+
+                                <div class="col-12 mt-4">
+                                    <div class="d-grid">
+                                        <button type="submit" class="btn btn-outline-primary">Login</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 d-lg-flex d-none">
+                <div class="p3 rounded-4 w-100 d-flex flex-wrap align-items-center jjustify-content-center border-3 bg-primary">
+                    <img src="../../../../assets/Images/boxed-login.png" class="img-fluid" alt="loginback">
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+</section>

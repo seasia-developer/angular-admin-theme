@@ -1,0 +1,222 @@
+<div class="card-container">
+    <div class="row g-">
+        <div class="col-12">
+            <div class="card tab-page my-4">
+                <div class="card-header py-4 d-flex flex-wrap flex-wrap align-items-center justify-content-between">
+                    <span> Default Settings</span>
+                </div>
+                <div class="card-body my-2">
+                    <div class="form-container">
+                        <form>
+                            <div class="form-group-container d-flex flex-wrap flex-wrap">
+                                <div class="col-12">
+                                    <div class="form-group my-2 ">
+                                        <label for="Companyname" class="py-2">Company Name</label>
+                                        <input type="text" class="form-control" id="companyName"
+                                            aria-describedby="startdate" placeholder="Company Name">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group-container d-flex flex-wrap flex-wrap">
+                                <div class="col-12 col-lg-3 col-md-6 col-sm-12">
+                                    <div class="form-group my-2 ">
+                                        <label for="City" class="py-2">City</label>
+                                        <input type="text" class="form-control" id="lastName" aria-describedby="City"
+                                            placeholder="City">
+                                    </div>
+                                </div>
+
+                                <div class="col-12 col-lg-3 col-md-6 col-sm-12 ">
+                                    <div class="form-group my-2">
+                                        <label for="state" class="py-2">State</label>
+                                        <input type="text" class="form-control" id="State" aria-describedby="State"
+                                            placeholder="State">
+                                    </div>
+                                </div>
+
+                                <div class="col-12 col-lg-3 col-md-6 col-sm-12 ">
+                                    <div class="form-group my-2">
+                                        <label for="zipcode" class="py-2">Zip Code</label>
+                                        <input type="text" class="form-control" id="zipcode" aria-describedby="zipcode"
+                                            placeholder="zipcode">
+                                    </div>
+                                </div>
+
+                                <div class="col-12 col-lg-3 col-md-6 col-sm-12 ">
+                                    <div class="form-group my-2">
+                                        <label for="country" class="py-2">Country</label>
+                                        <input type="text" class="form-control" id="country" aria-describedby="country"
+                                            placeholder="country">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group-container d-flex flex-wrap flex-wrap">
+                                <div class="col-12 col-lg-3 col-md-6 col-sm-12 ">
+                                    <div class="form-group my-2 ">
+                                        <label for="phonenumber" class="py-2">Phone Number</label>
+                                        <input type="text" class="form-control" id="phonenumber"
+                                            aria-describedby="phonenumber" placeholder="Phone Number">
+                                    </div>
+                                </div>
+
+
+                                <div class="col-12 col-lg-3 col-md-6 col-sm-12 ">
+                                    <div class="form-group my-2 ">
+                                        <label for="state" class="py-2">Address 1</label>
+                                        <input type="text" class="form-control" id="Address 1"
+                                            aria-describedby="Address 1" placeholder="Address 1">
+                                    </div>
+                                </div>
+
+                                <div class="col-12 col-lg-3 col-md-6 col-sm-12 ">
+                                    <div class="form-group my-2 ">
+                                        <label for="state" class="py-2">Address 2</label>
+                                        <input type="text" class="form-control" id="Address 1"
+                                            aria-describedby="Address 1" placeholder="Address 1">
+                                    </div>
+                                </div>
+
+
+                                <div class="col-12 col-lg-3 col-md-6 col-sm-12 ">
+                                    <div class="form-group my-2  ">
+                                        <label for="Country" class="py-2">time out</label>
+                                        <select class="form-control">
+                                            <option> Select</option>
+
+                                            <option> 15 minutes</option>
+                                            <option> 30 minutes</option>
+                                            <option> 45 minutes</option>
+                                            <option> 60 minutes</option>
+                                            <option> 90 minutes</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group my-4">
+                                <div class="button-container d-flex flex-wrap flex-wrap  justify-content-end align-items-center gap-10">
+                                    <button type="button" class="btn btn-outline-primary"
+                                        routerLink="/plans/addnew-plan">Save</button>
+
+                                    <button type="button" class="btn btn-outline-primary"
+                                        routerLink="/plans/addnew-plan">clear</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-12">
+            <div class="card tab-page my-4">
+                <div class="card-header  py-4 d-flex flex-wrap flex-wrap align-items-center justify-content-between">
+                    <span> Default date and clock settings</span>
+                </div>
+                <div class="card-body my-2">
+                    <div class="form-container">
+                        <form>
+                            <div class="form-group-container d-flex flex-wrap flex-wrap">
+                                <div class="col-12 col-lg-3 col-md-6 col-sm-12 ">
+                                    <div class="form-group my-2  ">
+                                        <label for="Country" class="py-2">default Date format</label>
+                                        <select class="form-control">
+                                            <option> Select</option>
+                                            <option>Month Day Year</option>
+                                            <option>Day Month Year</option>
+                                            <option>Year Month Day</option>
+                                            <option>Year Day month</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-lg-3 col-md-6 col-sm-12 ">
+                                    <div class="form-group my-2  ">
+                                        <label for="Country" class="py-2">date format</label>
+                                        <select class="form-control">
+                                            <option> Select</option>
+
+                                            <option>MM/DD/YYYY (Day)</option>
+                                            <option>MM-DD-YYYY (Day)</option>
+                                            <option>MM.DD.YYYY (Day)</option>
+                                            <option> MONTH DD YYYY (Day)</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-lg-3 col-md-6 col-sm-12 ">
+                                    <div class="form-group my-2">
+                                        <label for="Country" class="py-2">Default Clock Format</label>
+                                        <select class="form-control">
+                                            <option> Select</option>
+                                            <option> 1</option>
+                                            <option> 3 Hour clock minutes</option>
+                                            <option>24 Hour clock</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-lg-3 col-md-6 col-sm-12  align-self-center">
+                                    <div class="form-group my-2">
+                                        <label for="Country" class="py-2">12 Hour Clock</label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group my-4">
+                                <div class="button-container d-flex flex-wrap flex-wrap  justify-content-end align-items-center gap-10">
+                                    <button type="button" class="btn btn-outline-primary"
+                                        routerLink="/plans/addnew-plan">Save</button>
+
+                                    <button type="button" class="btn btn-outline-primary"
+                                        routerLink="/plans/addnew-plan">clear</button>
+                                </div>
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="col-12">
+            <div class="card tab-page my-4">
+                <div class="card-header  py-4 d-flex flex-wrap flex-wrap align-items-center justify-content-between">
+                    <span> time settings</span>
+                </div>
+                <div class="card-body my-2">
+                    <div class="form-container">
+                        <form>
+                            <div class="form-group-container d-flex flex-wrap flex-wrap">
+                                <div class="col-12">
+                                    <div class="form-group my-2  ">
+                                        <label for="time" class="py-2">Time Zone</label>
+                                        <select class="form-control">
+                                            <option> Select</option>
+                                            <option>Month Day Year</option>
+                                            <option>Day Month Year</option>
+                                            <option>Year Month Day</option>
+                                            <option>Year Day month</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group my-4">
+                                <div class="button-container d-flex flex-wrap flex-wrap  justify-content-end align-items-center gap-10">
+                                    <button type="button" class="btn btn-outline-primary"
+                                        routerLink="/plans/addnew-plan">Save</button>
+
+                                    <button type="button" class="btn btn-outline-primary"
+                                        routerLink="/plans/addnew-plan">clear</button>
+                                </div>
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+</div>

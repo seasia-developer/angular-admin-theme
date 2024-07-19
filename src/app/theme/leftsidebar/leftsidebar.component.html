@@ -1,0 +1,39 @@
+<aside class="sidebar-wrapper">
+    <div class="sidebar-header">
+        <!-- <div class="logo-icon">
+            <img src="../../../assets/Images/favicon-new.svg" alt="seasiaLogo">
+        </div> -->
+        <div class="logo-name flex-grow-1">
+            <h5 class="mb-0">SEASIA</h5>
+            <!-- <span>A CMMI Level 5 Company</span> -->
+        </div>
+
+        <div class="sideBar-close">
+            <span class="material-symbols-rounded">
+                close
+            </span>
+        </div>
+    </div>
+
+    <div class="sidebar-nav">
+        <div class="sidenav-container">
+            <nav>
+                <ul class="list-container" *ngFor="let data of menuData">
+                    <li class="list-item">
+                        <a class="list-item-inner" [routerLink]="data.route_loc" routerLinkActive="active">
+                            <div class="parent-Icon">
+                                <span [class]="data.route_icon_class">{{data.route_icon_name}}</span>
+                            </div>
+                            <div class="menu-title">
+                                <span>{{data.route_name}}</span>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+    <div class="sidebar-bottom">
+    </div>
+</aside>

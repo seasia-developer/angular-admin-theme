@@ -1,0 +1,120 @@
+<section class="user-list-container pb-4">
+    <div class="user-list-card">
+        <div class="row my-4">
+            <div class="col-12">
+              <div class="card ">
+                <div class="card-header py-4 d-flex flex-wrap align-items-center justify-content-between">
+                  <span> Company User List</span>
+                  <button type="button" class="btn btn-outline-primary" routerLink="/home/users/add-new-user">Add New
+                    Company/User</button>
+                </div>
+                <div class="card-body">
+                  <div class="table-responsive w-100">
+                    <div class="searchBarcontainer">
+                      <!-- <mat-form-feild>
+                        <input matInput placeholder="Search in table" search (keyup)="applyFilter()" #input>
+                      </mat-form-feild> -->
+                    </div>
+                    <table mat-table matSort [dataSource]="dataSource" class="mat-elevation-z8">
+    
+    
+    
+                      <!-- Define the table columns -->
+    
+                      
+                        <ng-container matColumnDef="companyId">
+                          <th mat-header-cell *matHeaderCellDef> Company Id</th>
+                          <td mat-cell *matCellDef="let element"> {{element.companyId}} </td>
+                        </ng-container>
+                        <ng-container matColumnDef="DomainName">
+                          <th mat-header-cell *matHeaderCellDef> DomainName</th>
+                          <td mat-cell *matCellDef="let element"> {{element.DomainName}} </td>
+                        </ng-container>
+                        <ng-container matColumnDef="Name">
+                          <th mat-header-cell *matHeaderCellDef> Name</th>
+                          <td mat-cell *matCellDef="let element"> {{element.Name}} </td>
+                        </ng-container>
+                        <ng-container matColumnDef="PlanName">
+                          <th mat-header-cell *matHeaderCellDef> PlanName</th>
+                          <td mat-cell *matCellDef="let element"> {{element.PlanName}} </td>
+                        </ng-container>
+                        <ng-container matColumnDef="PlanPrice">
+                          <th mat-header-cell *matHeaderCellDef>PlanPrice</th>
+                          <td mat-cell *matCellDef="let element"> {{element.PlanPrice}} </td>
+                        </ng-container>
+                        <ng-container matColumnDef="NoofHits">
+                          <th mat-header-cell *matHeaderCellDef> NoofHits</th>
+                          <td mat-cell *matCellDef="let element"> {{element.NoofHits}} </td>
+                        </ng-container>
+                        <ng-container matColumnDef="LastLogin">
+                          <th mat-header-cell *matHeaderCellDef> Last Login</th>
+                          <td mat-cell *matCellDef="let element"> {{element.LastLogin}} </td>
+                        </ng-container>
+                        <ng-container matColumnDef="Email">
+                          <th mat-header-cell *matHeaderCellDef>Email</th>
+                          <td mat-cell *matCellDef="let element"> {{element.Email}} </td>
+                        </ng-container>
+                        <ng-container matColumnDef="Company">
+                          <th mat-header-cell *matHeaderCellDef>Company</th>
+                          <td mat-cell *matCellDef="let element"> {{element.Company}} </td>
+                        </ng-container>
+                        <ng-container matColumnDef="Country">
+                          <th mat-header-cell *matHeaderCellDef>Country</th>
+                          <td mat-cell *matCellDef="let element"> {{element.Country}} </td>
+                        </ng-container>
+                        <ng-container matColumnDef="CreatedDate">
+                          <th mat-header-cell *matHeaderCellDef>CreatedDate</th>
+                          <td mat-cell *matCellDef="let element"> {{element.CreatedDate}} </td>
+                        </ng-container>
+                        <ng-container matColumnDef="StartedDate">
+                          <th mat-header-cell *matHeaderCellDef>StartedDate</th>
+                          <td mat-cell *matCellDef="let element"> {{element.StartedDate}} </td>
+                        </ng-container>
+                        <ng-container matColumnDef="AC_Type">
+                          <th mat-header-cell *matHeaderCellDef>AC_Type</th>
+                          <td mat-cell *matCellDef="let element"> {{element.AC_Type}} </td>
+                        </ng-container>
+                        <ng-container matColumnDef="Status">
+                          <th mat-header-cell *matHeaderCellDef>Status</th>
+                          <td mat-cell *matCellDef="let element"> {{element.Status}} </td>
+                        </ng-container>
+                        <ng-container matColumnDef="Action">
+                          <th mat-header-cell *matHeaderCellDef>Action</th>
+                          <td mat-cell *matCellDef="let element" style="min-width: 120px;">
+                          <select name="more-action" id="form-control" class="form-control" (change)="navigateTo($event)">
+                            <option value=" ">Select</option>
+                            <option value="view-user">View </option>
+                            <option value="edit-user">Edit</option>
+                            <option value="deactivate">deactivate</option>
+                            <option value="gotoSite"> Go to site</option>
+                            <option value="upgrade-plan">upgrade plan</option>
+                            <option value="mail">resend Welcome mail</option>
+                          </select>
+                           </td>
+                        </ng-container>
+                       
+                  
+                      <!-- <ng-container *ngFor="let column of displayedColumns; index as i" [matColumnDef]="column">
+    
+                        <td mat-cell *matCellDef="let element" > {{ element[column]}} </td>
+                      </ng-container> -->
+    
+    
+                      <!-- Define the table header row -->
+                      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    
+                      <!-- Define the table rows -->
+                      <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+                    </table>
+                    <!-- Paginator -->
+                    <div class="mat-paginator">
+                      <mat-paginator [pageSize]="pageSize" [pageIndex]="pageIndex" [pageSizeOptions]="[5, 10, 25, 100]"
+                        [length]="totalItems" (page)="onPageChange($event)"></mat-paginator>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+    </div>
+  </section>

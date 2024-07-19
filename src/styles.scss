@@ -1,0 +1,254 @@
+
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+@use '@angular/material' as mat;
+// Plus imports for other components in your app.
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat.core();
+
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue. Available color palettes: https://material.io/design/color/
+$appsVendor-primary: mat.define-palette(mat.$indigo-palette);
+$appsVendor-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
+
+// The warn palette is optional (defaults to red).
+$appsVendor-warn: mat.define-palette(mat.$red-palette);
+
+// Create the theme object. A theme consists of configurations for individual
+// theming systems such as "color" or "typography".
+$appsVendor-theme: mat.define-light-theme((
+  color: (
+    primary: $appsVendor-primary,
+    accent: $appsVendor-accent,
+    warn: $appsVendor-warn,
+  )
+));
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include mat.all-component-themes($appsVendor-theme);
+
+// import variable style sheets 
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+@import '../src/app/theme/variabels.scss';
+
+/* You can add global styles to this file, and also import other style files */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: $light-background-color;
+    font-family: $light-font-family;
+    font-size: 14px;
+}
+
+a {
+    text-decoration: none;
+    display: block;
+    color: black;
+}
+
+.nav-link{
+    color: inherit;
+}
+
+.nav-link.active{
+    color : $light-primmary-color !important;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.gap-10{
+    gap: 0.5rem;
+}
+
+.cursor-pointer{
+    cursor: pointer;
+}
+
+.bg-primary{
+    background: $light-primmary-color !important;
+}
+
+.rounded-4{
+    border-radius: 1rem;
+}
+
+.card-header{
+    text-transform: capitalize;
+    background: $light-card-header-background;
+    color: $light-card-title;
+}
+
+.btn-outline-primary {
+    background: $light-primmary-color;
+    border-color: $light-primmary-color;
+    color: #fff;
+    transition: $light-transition;
+}
+
+.btn-outline-primary:hover {
+    background-color: $light-white-color;
+    border-color: $light-primmary-color;
+    color : $light-primmary-color;
+}
+
+.btn-check:active+.btn-outline-primary, .btn-check:checked+.btn-outline-primary, .btn-outline-primary.active, .btn-outline-primary.dropdown-toggle.show, .btn-outline-primary:active {
+    color: #fff;
+    background-color: $light-primmary-color;
+    border-color: $light-primmary-color;
+}
+
+button:focus:not(:focus-visible) {
+    outline: 0;
+}
+.btn-check:focus+.btn-outline-primary, .btn-outline-primary:focus {
+    box-shadow: $light-box-shadow !important;
+}
+
+button.rounded-50{
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+button.rounded-50 .material-symbols-rounded{
+    font-weight: 300;
+}
+
+table thead,
+table tbody tr th td {
+    width: auto;
+    padding: 10px 15px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    position: relative;
+}
+
+table  thead  tr  th {
+    border-bottom: 2px solid $light-primmary-color !important;
+}
+
+
+.mdc-data-table__table {
+    border: 1px solid $light-border-color !important;
+}
+
+.mat-elevation-z8, 
+.mat-mdc-elevation-specific.mat-elevation-z8 {
+   box-shadow: none !important;
+}
+
+
+    /* Prevent line breaks within cells */
+
+
+    .mdc-data-table__cell, 
+    .mdc-data-table__header-cell {
+        padding: 10px 16px !important;
+        font-size: 14px !important;
+        text-align: center !important;
+        font-weight: 300 !important;
+    }
+
+    .mdc-data-table__header-cell{
+        font-weight: 500 !important;
+    }
+    
+
+    .mat-paginator{
+        margin: 30px 0px;
+    }
+
+
+
+.form-group-container .form-group{
+    padding: 0px 8px;
+    text-transform: capitalize;
+}
+
+
+.form-control:focus {
+    color: #212529;
+    background-color: #fff;
+    border-color: $light-primmary-color;
+    outline: 0;
+    box-shadow: $light-box-shadow;
+}
+
+
+.form-control.form-control-valid:focus{
+    border-color : $light-border-valid;
+    box-shadow:  $light-box-shadow-valid;
+}
+
+.form-control.form-control-invalid:focus{
+    border-color : $light-border-invalid;
+    box-shadow:  $light-box-shadow-invalid;
+}
+
+select option{
+    text-transform: capitalize;
+}
+
+
+.text-danger{
+    font-size: 14px;
+    color: $light-text-danger;
+    padding: 0.45rem 0rem;
+}
+
+.text-sucess{
+    font-size: 14px;
+    color : $light-text-sucess;
+    padding: 0.45rem 0rem;
+}
+
+
+.box-shadow{
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+
+
+@media (min-width: 1366px)
+{
+    .container {
+        max-width: 1250px;
+    }
+
+}
+
+@media (max-width: 576px)
+{
+    .nav {
+        flex-direction: column;
+    }
+
+}
+
+
+

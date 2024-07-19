@@ -1,0 +1,19 @@
+@import '../../../theme/variabels.scss';
+
+.login-container{
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .logo-image{
+        max-width: 100%;
+        width: 100%;
+        img{
+            width: 45px;
+        }
+        h3{
+            letter-spacing: 2px;
+            color: $light-primmary-color;
+        }
+    }
+}
